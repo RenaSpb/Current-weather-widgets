@@ -41,7 +41,7 @@ function App() {
         };
 
         fetchWeatherData();
-    }, [city, stateCode, units]);
+    }, [onOpen, city, stateCode, units]);
 
     const handleCityChange = (event) => {
         setInputCity(event.target.value);
@@ -176,7 +176,7 @@ function App() {
                                         <div className="city-name">
                                             <h2>{weather.name} {weather.country}</h2>
                                             <div className='photoWeather'>
-                                                <img src={weather.iconURL} alt="city image"/>
+                                                <img src={weather.iconURL} alt="city"/>
                                                 <h2>{weather.main}</h2>
                                             </div>
                                         </div>
